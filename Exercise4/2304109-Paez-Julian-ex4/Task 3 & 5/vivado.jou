@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Nov 15 20:13:55 2023
+# Process ID: 9628
+# Current directory: C:/VivadoProjects/Exercise4/Task 3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5572 C:\VivadoProjects\Exercise4\Task 3\Exercise4.xpr
+# Log file: C:/VivadoProjects/Exercise4/Task 3/vivado.log
+# Journal file: C:/VivadoProjects/Exercise4/Task 3\vivado.jou
+# Running On: DESKTOP-M3IS96G, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 4, Host memory: 8264 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/VivadoProjects/Exercise4/Task 3/Exercise4.xpr}
+update_compile_order -fileset sources_1
+
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_sim
+launch_simulation
+source testbench.tcl
+close_sim

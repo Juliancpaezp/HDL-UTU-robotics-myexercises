@@ -1,0 +1,882 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Wed Nov 15 20:22:56 2023
+| Host         : DESKTOP-M3IS96G running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
+| Design       : top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  215         
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (215)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (407)
+5. checking no_input_delay (4)
+6. checking no_output_delay (4)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (215)
+--------------------------
+ There are 143 register/latch pins with no clock driven by root clock pin: GCLK (HIGH)
+
+ There are 72 register/latch pins with no clock driven by root clock pin: Timer_connections/my_clock_out_reg/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (407)
+--------------------------------------------------
+ There are 407 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (4)
+------------------------------
+ There are 4 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (4)
+-------------------------------
+ There are 4 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  411          inf        0.000                      0                  411           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           411 Endpoints
+Min Delay           411 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 Timer_connections/limit_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Timer_connections/my_clock_out_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.691ns  (logic 1.726ns (19.860%)  route 6.965ns (80.140%))
+  Logic Levels:           7  (CARRY4=4 FDRE=1 LUT2=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y102       FDRE                         0.000     0.000 r  Timer_connections/limit_reg[5]/C
+    SLICE_X110Y102       FDRE (Prop_fdre_C_Q)         0.419     0.419 r  Timer_connections/limit_reg[5]/Q
+                         net (fo=4, routed)           1.021     1.440    Timer_connections/limit_reg_n_0_[5]
+    SLICE_X108Y101       LUT3 (Prop_lut3_I1_O)        0.299     1.739 r  Timer_connections/clock_counter0_carry_i_7/O
+                         net (fo=1, routed)           0.000     1.739    Timer_connections/clock_counter0_carry_i_7_n_0
+    SLICE_X108Y101       CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     2.272 r  Timer_connections/clock_counter0_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.272    Timer_connections/clock_counter0_carry_n_0
+    SLICE_X108Y102       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.389 r  Timer_connections/clock_counter0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     2.389    Timer_connections/clock_counter0_carry__0_n_0
+    SLICE_X108Y103       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.506 r  Timer_connections/clock_counter0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.506    Timer_connections/clock_counter0_carry__1_n_0
+    SLICE_X108Y104       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.623 r  Timer_connections/clock_counter0_carry__2/CO[3]
+                         net (fo=34, routed)          5.944     8.567    Timer_connections/clear
+    SLICE_X50Y46         LUT2 (Prop_lut2_I0_O)        0.124     8.691 r  Timer_connections/my_clock_out_i_1/O
+                         net (fo=1, routed)           0.000     8.691    Timer_connections/my_clock_out_i_1_n_0
+    SLICE_X50Y46         FDRE                                         r  Timer_connections/my_clock_out_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/state_iterator_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/state_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.989ns  (logic 3.524ns (44.113%)  route 4.465ns (55.887%))
+  Logic Levels:           13  (CARRY4=9 FDRE=1 LUT2=1 LUT4=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y50        FDRE                         0.000     0.000 r  LED_Driver_connections/state_iterator_reg[1]/C
+    SLICE_X112Y50        FDRE (Prop_fdre_C_Q)         0.478     0.478 r  LED_Driver_connections/state_iterator_reg[1]/Q
+                         net (fo=4, routed)           1.124     1.602    LED_Driver_connections/state_iterator[1]
+    SLICE_X110Y48        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.833     2.435 r  LED_Driver_connections/state_iterator2_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.435    LED_Driver_connections/state_iterator2_carry_n_0
+    SLICE_X110Y49        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.549 r  LED_Driver_connections/state_iterator2_carry__0/CO[3]
+                         net (fo=1, routed)           0.001     2.549    LED_Driver_connections/state_iterator2_carry__0_n_0
+    SLICE_X110Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.663 r  LED_Driver_connections/state_iterator2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.663    LED_Driver_connections/state_iterator2_carry__1_n_0
+    SLICE_X110Y51        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.777 r  LED_Driver_connections/state_iterator2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.777    LED_Driver_connections/state_iterator2_carry__2_n_0
+    SLICE_X110Y52        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.891 r  LED_Driver_connections/state_iterator2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     2.891    LED_Driver_connections/state_iterator2_carry__3_n_0
+    SLICE_X110Y53        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.005 r  LED_Driver_connections/state_iterator2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     3.005    LED_Driver_connections/state_iterator2_carry__4_n_0
+    SLICE_X110Y54        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.119 r  LED_Driver_connections/state_iterator2_carry__5/CO[3]
+                         net (fo=1, routed)           0.000     3.119    LED_Driver_connections/state_iterator2_carry__5_n_0
+    SLICE_X110Y55        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     3.341 f  LED_Driver_connections/state_iterator2_carry__6/O[0]
+                         net (fo=5, routed)           1.018     4.360    LED_Driver_connections/state_iterator2_carry__6_n_7
+    SLICE_X108Y53        LUT2 (Prop_lut2_I1_O)        0.299     4.659 r  LED_Driver_connections/state_iterator1_carry__2_i_5/O
+                         net (fo=1, routed)           0.000     4.659    LED_Driver_connections/state_iterator1_carry__2_i_5_n_0
+    SLICE_X108Y53        CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.574     5.233 r  LED_Driver_connections/state_iterator1_carry__2/CO[2]
+                         net (fo=34, routed)          1.801     7.034    LED_Driver_connections/state_iterator1_carry__2_n_1
+    SLICE_X109Y49        LUT6 (Prop_lut6_I0_O)        0.310     7.344 r  LED_Driver_connections/state[2]_i_2/O
+                         net (fo=1, routed)           0.520     7.865    LED_Driver_connections/p_2_in[2]
+    SLICE_X108Y49        LUT4 (Prop_lut4_I2_O)        0.124     7.989 r  LED_Driver_connections/state[2]_i_1/O
+                         net (fo=1, routed)           0.000     7.989    LED_Driver_connections/state[2]_i_1_n_0
+    SLICE_X108Y49        FDRE                                         r  LED_Driver_connections/state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Timer_connections/limit_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Timer_connections/Output_CLOCK_reg/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.882ns  (logic 1.602ns (20.324%)  route 6.280ns (79.676%))
+  Logic Levels:           6  (CARRY4=4 FDRE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y102       FDRE                         0.000     0.000 r  Timer_connections/limit_reg[5]/C
+    SLICE_X110Y102       FDRE (Prop_fdre_C_Q)         0.419     0.419 r  Timer_connections/limit_reg[5]/Q
+                         net (fo=4, routed)           1.021     1.440    Timer_connections/limit_reg_n_0_[5]
+    SLICE_X108Y101       LUT3 (Prop_lut3_I1_O)        0.299     1.739 r  Timer_connections/clock_counter0_carry_i_7/O
+                         net (fo=1, routed)           0.000     1.739    Timer_connections/clock_counter0_carry_i_7_n_0
+    SLICE_X108Y101       CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     2.272 r  Timer_connections/clock_counter0_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.272    Timer_connections/clock_counter0_carry_n_0
+    SLICE_X108Y102       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.389 r  Timer_connections/clock_counter0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     2.389    Timer_connections/clock_counter0_carry__0_n_0
+    SLICE_X108Y103       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.506 r  Timer_connections/clock_counter0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.506    Timer_connections/clock_counter0_carry__1_n_0
+    SLICE_X108Y104       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.623 r  Timer_connections/clock_counter0_carry__2/CO[3]
+                         net (fo=34, routed)          5.260     7.882    Timer_connections/clear
+    SLICE_X112Y10        FDRE                                         r  Timer_connections/Output_CLOCK_reg/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/state_iterator_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/state_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.359ns  (logic 3.524ns (47.884%)  route 3.835ns (52.116%))
+  Logic Levels:           13  (CARRY4=9 FDRE=1 LUT2=1 LUT4=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y50        FDRE                         0.000     0.000 r  LED_Driver_connections/state_iterator_reg[1]/C
+    SLICE_X112Y50        FDRE (Prop_fdre_C_Q)         0.478     0.478 r  LED_Driver_connections/state_iterator_reg[1]/Q
+                         net (fo=4, routed)           1.124     1.602    LED_Driver_connections/state_iterator[1]
+    SLICE_X110Y48        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.833     2.435 r  LED_Driver_connections/state_iterator2_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.435    LED_Driver_connections/state_iterator2_carry_n_0
+    SLICE_X110Y49        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.549 r  LED_Driver_connections/state_iterator2_carry__0/CO[3]
+                         net (fo=1, routed)           0.001     2.549    LED_Driver_connections/state_iterator2_carry__0_n_0
+    SLICE_X110Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.663 r  LED_Driver_connections/state_iterator2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.663    LED_Driver_connections/state_iterator2_carry__1_n_0
+    SLICE_X110Y51        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.777 r  LED_Driver_connections/state_iterator2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.777    LED_Driver_connections/state_iterator2_carry__2_n_0
+    SLICE_X110Y52        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.891 r  LED_Driver_connections/state_iterator2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     2.891    LED_Driver_connections/state_iterator2_carry__3_n_0
+    SLICE_X110Y53        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.005 r  LED_Driver_connections/state_iterator2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     3.005    LED_Driver_connections/state_iterator2_carry__4_n_0
+    SLICE_X110Y54        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.119 r  LED_Driver_connections/state_iterator2_carry__5/CO[3]
+                         net (fo=1, routed)           0.000     3.119    LED_Driver_connections/state_iterator2_carry__5_n_0
+    SLICE_X110Y55        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     3.341 f  LED_Driver_connections/state_iterator2_carry__6/O[0]
+                         net (fo=5, routed)           1.018     4.360    LED_Driver_connections/state_iterator2_carry__6_n_7
+    SLICE_X108Y53        LUT2 (Prop_lut2_I1_O)        0.299     4.659 r  LED_Driver_connections/state_iterator1_carry__2_i_5/O
+                         net (fo=1, routed)           0.000     4.659    LED_Driver_connections/state_iterator1_carry__2_i_5_n_0
+    SLICE_X108Y53        CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.574     5.233 r  LED_Driver_connections/state_iterator1_carry__2/CO[2]
+                         net (fo=34, routed)          1.120     6.353    LED_Driver_connections/state_iterator1_carry__2_n_1
+    SLICE_X109Y50        LUT5 (Prop_lut5_I0_O)        0.310     6.663 r  LED_Driver_connections/state[0]_i_2/O
+                         net (fo=1, routed)           0.573     7.235    LED_Driver_connections/p_2_in[0]
+    SLICE_X108Y49        LUT4 (Prop_lut4_I2_O)        0.124     7.359 r  LED_Driver_connections/state[0]_i_1/O
+                         net (fo=1, routed)           0.000     7.359    LED_Driver_connections/state[0]_i_1_n_0
+    SLICE_X108Y49        FDRE                                         r  LED_Driver_connections/state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/state_iterator_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/state_iterator_reg[9]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.159ns  (logic 3.426ns (47.855%)  route 3.733ns (52.145%))
+  Logic Levels:           12  (CARRY4=9 FDRE=1 LUT2=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y50        FDRE                         0.000     0.000 r  LED_Driver_connections/state_iterator_reg[1]/C
+    SLICE_X112Y50        FDRE (Prop_fdre_C_Q)         0.478     0.478 r  LED_Driver_connections/state_iterator_reg[1]/Q
+                         net (fo=4, routed)           1.124     1.602    LED_Driver_connections/state_iterator[1]
+    SLICE_X110Y48        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.833     2.435 r  LED_Driver_connections/state_iterator2_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.435    LED_Driver_connections/state_iterator2_carry_n_0
+    SLICE_X110Y49        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.549 r  LED_Driver_connections/state_iterator2_carry__0/CO[3]
+                         net (fo=1, routed)           0.001     2.549    LED_Driver_connections/state_iterator2_carry__0_n_0
+    SLICE_X110Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.663 r  LED_Driver_connections/state_iterator2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.663    LED_Driver_connections/state_iterator2_carry__1_n_0
+    SLICE_X110Y51        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.777 r  LED_Driver_connections/state_iterator2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.777    LED_Driver_connections/state_iterator2_carry__2_n_0
+    SLICE_X110Y52        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.891 r  LED_Driver_connections/state_iterator2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     2.891    LED_Driver_connections/state_iterator2_carry__3_n_0
+    SLICE_X110Y53        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.005 r  LED_Driver_connections/state_iterator2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     3.005    LED_Driver_connections/state_iterator2_carry__4_n_0
+    SLICE_X110Y54        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.119 r  LED_Driver_connections/state_iterator2_carry__5/CO[3]
+                         net (fo=1, routed)           0.000     3.119    LED_Driver_connections/state_iterator2_carry__5_n_0
+    SLICE_X110Y55        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     3.341 f  LED_Driver_connections/state_iterator2_carry__6/O[0]
+                         net (fo=5, routed)           1.018     4.360    LED_Driver_connections/state_iterator2_carry__6_n_7
+    SLICE_X108Y53        LUT2 (Prop_lut2_I1_O)        0.299     4.659 r  LED_Driver_connections/state_iterator1_carry__2_i_5/O
+                         net (fo=1, routed)           0.000     4.659    LED_Driver_connections/state_iterator1_carry__2_i_5_n_0
+    SLICE_X108Y53        CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.574     5.233 f  LED_Driver_connections/state_iterator1_carry__2/CO[2]
+                         net (fo=34, routed)          1.590     6.823    LED_Driver_connections/state_iterator1_carry__2_n_1
+    SLICE_X111Y49        LUT4 (Prop_lut4_I2_O)        0.336     7.159 r  LED_Driver_connections/__0/i__rep__21/O
+                         net (fo=1, routed)           0.000     7.159    LED_Driver_connections/__0/i__rep__21_n_0
+    SLICE_X111Y49        FDRE                                         r  LED_Driver_connections/state_iterator_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/state_iterator_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/state_iterator_reg[8]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.133ns  (logic 3.400ns (47.665%)  route 3.733ns (52.335%))
+  Logic Levels:           12  (CARRY4=9 FDRE=1 LUT2=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y50        FDRE                         0.000     0.000 r  LED_Driver_connections/state_iterator_reg[1]/C
+    SLICE_X112Y50        FDRE (Prop_fdre_C_Q)         0.478     0.478 r  LED_Driver_connections/state_iterator_reg[1]/Q
+                         net (fo=4, routed)           1.124     1.602    LED_Driver_connections/state_iterator[1]
+    SLICE_X110Y48        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.833     2.435 r  LED_Driver_connections/state_iterator2_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.435    LED_Driver_connections/state_iterator2_carry_n_0
+    SLICE_X110Y49        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.549 r  LED_Driver_connections/state_iterator2_carry__0/CO[3]
+                         net (fo=1, routed)           0.001     2.549    LED_Driver_connections/state_iterator2_carry__0_n_0
+    SLICE_X110Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.663 r  LED_Driver_connections/state_iterator2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.663    LED_Driver_connections/state_iterator2_carry__1_n_0
+    SLICE_X110Y51        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.777 r  LED_Driver_connections/state_iterator2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.777    LED_Driver_connections/state_iterator2_carry__2_n_0
+    SLICE_X110Y52        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.891 r  LED_Driver_connections/state_iterator2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     2.891    LED_Driver_connections/state_iterator2_carry__3_n_0
+    SLICE_X110Y53        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.005 r  LED_Driver_connections/state_iterator2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     3.005    LED_Driver_connections/state_iterator2_carry__4_n_0
+    SLICE_X110Y54        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.119 r  LED_Driver_connections/state_iterator2_carry__5/CO[3]
+                         net (fo=1, routed)           0.000     3.119    LED_Driver_connections/state_iterator2_carry__5_n_0
+    SLICE_X110Y55        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     3.341 f  LED_Driver_connections/state_iterator2_carry__6/O[0]
+                         net (fo=5, routed)           1.018     4.360    LED_Driver_connections/state_iterator2_carry__6_n_7
+    SLICE_X108Y53        LUT2 (Prop_lut2_I1_O)        0.299     4.659 r  LED_Driver_connections/state_iterator1_carry__2_i_5/O
+                         net (fo=1, routed)           0.000     4.659    LED_Driver_connections/state_iterator1_carry__2_i_5_n_0
+    SLICE_X108Y53        CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.574     5.233 f  LED_Driver_connections/state_iterator1_carry__2/CO[2]
+                         net (fo=34, routed)          1.590     6.823    LED_Driver_connections/state_iterator1_carry__2_n_1
+    SLICE_X111Y49        LUT4 (Prop_lut4_I2_O)        0.310     7.133 r  LED_Driver_connections/__0/i__rep__22/O
+                         net (fo=1, routed)           0.000     7.133    LED_Driver_connections/__0/i__rep__22_n_0
+    SLICE_X111Y49        FDRE                                         r  LED_Driver_connections/state_iterator_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/state_iterator_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/state_iterator_reg[11]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.088ns  (logic 3.426ns (48.335%)  route 3.662ns (51.665%))
+  Logic Levels:           12  (CARRY4=9 FDRE=1 LUT2=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y50        FDRE                         0.000     0.000 r  LED_Driver_connections/state_iterator_reg[1]/C
+    SLICE_X112Y50        FDRE (Prop_fdre_C_Q)         0.478     0.478 r  LED_Driver_connections/state_iterator_reg[1]/Q
+                         net (fo=4, routed)           1.124     1.602    LED_Driver_connections/state_iterator[1]
+    SLICE_X110Y48        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.833     2.435 r  LED_Driver_connections/state_iterator2_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.435    LED_Driver_connections/state_iterator2_carry_n_0
+    SLICE_X110Y49        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.549 r  LED_Driver_connections/state_iterator2_carry__0/CO[3]
+                         net (fo=1, routed)           0.001     2.549    LED_Driver_connections/state_iterator2_carry__0_n_0
+    SLICE_X110Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.663 r  LED_Driver_connections/state_iterator2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.663    LED_Driver_connections/state_iterator2_carry__1_n_0
+    SLICE_X110Y51        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.777 r  LED_Driver_connections/state_iterator2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.777    LED_Driver_connections/state_iterator2_carry__2_n_0
+    SLICE_X110Y52        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.891 r  LED_Driver_connections/state_iterator2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     2.891    LED_Driver_connections/state_iterator2_carry__3_n_0
+    SLICE_X110Y53        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.005 r  LED_Driver_connections/state_iterator2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     3.005    LED_Driver_connections/state_iterator2_carry__4_n_0
+    SLICE_X110Y54        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.119 r  LED_Driver_connections/state_iterator2_carry__5/CO[3]
+                         net (fo=1, routed)           0.000     3.119    LED_Driver_connections/state_iterator2_carry__5_n_0
+    SLICE_X110Y55        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     3.341 f  LED_Driver_connections/state_iterator2_carry__6/O[0]
+                         net (fo=5, routed)           1.018     4.360    LED_Driver_connections/state_iterator2_carry__6_n_7
+    SLICE_X108Y53        LUT2 (Prop_lut2_I1_O)        0.299     4.659 r  LED_Driver_connections/state_iterator1_carry__2_i_5/O
+                         net (fo=1, routed)           0.000     4.659    LED_Driver_connections/state_iterator1_carry__2_i_5_n_0
+    SLICE_X108Y53        CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.574     5.233 f  LED_Driver_connections/state_iterator1_carry__2/CO[2]
+                         net (fo=34, routed)          1.519     6.752    LED_Driver_connections/state_iterator1_carry__2_n_1
+    SLICE_X112Y50        LUT4 (Prop_lut4_I2_O)        0.336     7.088 r  LED_Driver_connections/__0/i__rep__19/O
+                         net (fo=1, routed)           0.000     7.088    LED_Driver_connections/__0/i__rep__19_n_0
+    SLICE_X112Y50        FDRE                                         r  LED_Driver_connections/state_iterator_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/state_iterator_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/state_iterator_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.080ns  (logic 3.428ns (48.418%)  route 3.652ns (51.582%))
+  Logic Levels:           12  (CARRY4=9 FDRE=1 LUT2=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y50        FDRE                         0.000     0.000 r  LED_Driver_connections/state_iterator_reg[1]/C
+    SLICE_X112Y50        FDRE (Prop_fdre_C_Q)         0.478     0.478 r  LED_Driver_connections/state_iterator_reg[1]/Q
+                         net (fo=4, routed)           1.124     1.602    LED_Driver_connections/state_iterator[1]
+    SLICE_X110Y48        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.833     2.435 r  LED_Driver_connections/state_iterator2_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.435    LED_Driver_connections/state_iterator2_carry_n_0
+    SLICE_X110Y49        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.549 r  LED_Driver_connections/state_iterator2_carry__0/CO[3]
+                         net (fo=1, routed)           0.001     2.549    LED_Driver_connections/state_iterator2_carry__0_n_0
+    SLICE_X110Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.663 r  LED_Driver_connections/state_iterator2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.663    LED_Driver_connections/state_iterator2_carry__1_n_0
+    SLICE_X110Y51        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.777 r  LED_Driver_connections/state_iterator2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.777    LED_Driver_connections/state_iterator2_carry__2_n_0
+    SLICE_X110Y52        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.891 r  LED_Driver_connections/state_iterator2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     2.891    LED_Driver_connections/state_iterator2_carry__3_n_0
+    SLICE_X110Y53        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.005 r  LED_Driver_connections/state_iterator2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     3.005    LED_Driver_connections/state_iterator2_carry__4_n_0
+    SLICE_X110Y54        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.119 r  LED_Driver_connections/state_iterator2_carry__5/CO[3]
+                         net (fo=1, routed)           0.000     3.119    LED_Driver_connections/state_iterator2_carry__5_n_0
+    SLICE_X110Y55        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     3.341 f  LED_Driver_connections/state_iterator2_carry__6/O[0]
+                         net (fo=5, routed)           1.018     4.360    LED_Driver_connections/state_iterator2_carry__6_n_7
+    SLICE_X108Y53        LUT2 (Prop_lut2_I1_O)        0.299     4.659 r  LED_Driver_connections/state_iterator1_carry__2_i_5/O
+                         net (fo=1, routed)           0.000     4.659    LED_Driver_connections/state_iterator1_carry__2_i_5_n_0
+    SLICE_X108Y53        CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.574     5.233 f  LED_Driver_connections/state_iterator1_carry__2/CO[2]
+                         net (fo=34, routed)          1.509     6.742    LED_Driver_connections/state_iterator1_carry__2_n_1
+    SLICE_X112Y50        LUT4 (Prop_lut4_I2_O)        0.338     7.080 r  LED_Driver_connections/__0/i__rep__29/O
+                         net (fo=1, routed)           0.000     7.080    LED_Driver_connections/__0/i__rep__29_n_0
+    SLICE_X112Y50        FDRE                                         r  LED_Driver_connections/state_iterator_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/state_iterator_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/state_iterator_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.070ns  (logic 3.425ns (48.444%)  route 3.645ns (51.556%))
+  Logic Levels:           12  (CARRY4=9 FDRE=1 LUT2=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y50        FDRE                         0.000     0.000 r  LED_Driver_connections/state_iterator_reg[1]/C
+    SLICE_X112Y50        FDRE (Prop_fdre_C_Q)         0.478     0.478 r  LED_Driver_connections/state_iterator_reg[1]/Q
+                         net (fo=4, routed)           1.124     1.602    LED_Driver_connections/state_iterator[1]
+    SLICE_X110Y48        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.833     2.435 r  LED_Driver_connections/state_iterator2_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.435    LED_Driver_connections/state_iterator2_carry_n_0
+    SLICE_X110Y49        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.549 r  LED_Driver_connections/state_iterator2_carry__0/CO[3]
+                         net (fo=1, routed)           0.001     2.549    LED_Driver_connections/state_iterator2_carry__0_n_0
+    SLICE_X110Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.663 r  LED_Driver_connections/state_iterator2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.663    LED_Driver_connections/state_iterator2_carry__1_n_0
+    SLICE_X110Y51        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.777 r  LED_Driver_connections/state_iterator2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.777    LED_Driver_connections/state_iterator2_carry__2_n_0
+    SLICE_X110Y52        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.891 r  LED_Driver_connections/state_iterator2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     2.891    LED_Driver_connections/state_iterator2_carry__3_n_0
+    SLICE_X110Y53        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.005 r  LED_Driver_connections/state_iterator2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     3.005    LED_Driver_connections/state_iterator2_carry__4_n_0
+    SLICE_X110Y54        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.119 r  LED_Driver_connections/state_iterator2_carry__5/CO[3]
+                         net (fo=1, routed)           0.000     3.119    LED_Driver_connections/state_iterator2_carry__5_n_0
+    SLICE_X110Y55        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     3.341 f  LED_Driver_connections/state_iterator2_carry__6/O[0]
+                         net (fo=5, routed)           1.018     4.360    LED_Driver_connections/state_iterator2_carry__6_n_7
+    SLICE_X108Y53        LUT2 (Prop_lut2_I1_O)        0.299     4.659 r  LED_Driver_connections/state_iterator1_carry__2_i_5/O
+                         net (fo=1, routed)           0.000     4.659    LED_Driver_connections/state_iterator1_carry__2_i_5_n_0
+    SLICE_X108Y53        CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.574     5.233 f  LED_Driver_connections/state_iterator1_carry__2/CO[2]
+                         net (fo=34, routed)          1.502     6.735    LED_Driver_connections/state_iterator1_carry__2_n_1
+    SLICE_X111Y49        LUT4 (Prop_lut4_I2_O)        0.335     7.070 r  LED_Driver_connections/__0/i__rep__27/O
+                         net (fo=1, routed)           0.000     7.070    LED_Driver_connections/__0/i__rep__27_n_0
+    SLICE_X111Y49        FDRE                                         r  LED_Driver_connections/state_iterator_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/state_iterator_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/state_iterator_reg[10]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.062ns  (logic 3.400ns (48.145%)  route 3.662ns (51.855%))
+  Logic Levels:           12  (CARRY4=9 FDRE=1 LUT2=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y50        FDRE                         0.000     0.000 r  LED_Driver_connections/state_iterator_reg[1]/C
+    SLICE_X112Y50        FDRE (Prop_fdre_C_Q)         0.478     0.478 r  LED_Driver_connections/state_iterator_reg[1]/Q
+                         net (fo=4, routed)           1.124     1.602    LED_Driver_connections/state_iterator[1]
+    SLICE_X110Y48        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.833     2.435 r  LED_Driver_connections/state_iterator2_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.435    LED_Driver_connections/state_iterator2_carry_n_0
+    SLICE_X110Y49        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.549 r  LED_Driver_connections/state_iterator2_carry__0/CO[3]
+                         net (fo=1, routed)           0.001     2.549    LED_Driver_connections/state_iterator2_carry__0_n_0
+    SLICE_X110Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.663 r  LED_Driver_connections/state_iterator2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.663    LED_Driver_connections/state_iterator2_carry__1_n_0
+    SLICE_X110Y51        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.777 r  LED_Driver_connections/state_iterator2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.777    LED_Driver_connections/state_iterator2_carry__2_n_0
+    SLICE_X110Y52        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.891 r  LED_Driver_connections/state_iterator2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     2.891    LED_Driver_connections/state_iterator2_carry__3_n_0
+    SLICE_X110Y53        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.005 r  LED_Driver_connections/state_iterator2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     3.005    LED_Driver_connections/state_iterator2_carry__4_n_0
+    SLICE_X110Y54        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.119 r  LED_Driver_connections/state_iterator2_carry__5/CO[3]
+                         net (fo=1, routed)           0.000     3.119    LED_Driver_connections/state_iterator2_carry__5_n_0
+    SLICE_X110Y55        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     3.341 f  LED_Driver_connections/state_iterator2_carry__6/O[0]
+                         net (fo=5, routed)           1.018     4.360    LED_Driver_connections/state_iterator2_carry__6_n_7
+    SLICE_X108Y53        LUT2 (Prop_lut2_I1_O)        0.299     4.659 r  LED_Driver_connections/state_iterator1_carry__2_i_5/O
+                         net (fo=1, routed)           0.000     4.659    LED_Driver_connections/state_iterator1_carry__2_i_5_n_0
+    SLICE_X108Y53        CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.574     5.233 f  LED_Driver_connections/state_iterator1_carry__2/CO[2]
+                         net (fo=34, routed)          1.519     6.752    LED_Driver_connections/state_iterator1_carry__2_n_1
+    SLICE_X112Y50        LUT4 (Prop_lut4_I2_O)        0.310     7.062 r  LED_Driver_connections/__0/i__rep__20/O
+                         net (fo=1, routed)           0.000     7.062    LED_Driver_connections/__0/i__rep__20_n_0
+    SLICE_X112Y50        FDRE                                         r  LED_Driver_connections/state_iterator_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 Timer_connections/clock_counter_reg[27]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Timer_connections/clock_counter_reg[27]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.367ns  (logic 0.249ns (67.838%)  route 0.118ns (32.162%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X109Y105       FDRE                         0.000     0.000 r  Timer_connections/clock_counter_reg[27]/C
+    SLICE_X109Y105       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Timer_connections/clock_counter_reg[27]/Q
+                         net (fo=3, routed)           0.118     0.259    Timer_connections/clock_counter_reg[27]
+    SLICE_X109Y105       CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.367 r  Timer_connections/clock_counter_reg[24]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.367    Timer_connections/clock_counter_reg[24]_i_1_n_4
+    SLICE_X109Y105       FDRE                                         r  Timer_connections/clock_counter_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/state_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/duty_cycle_1_reg[6]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.367ns  (logic 0.209ns (56.879%)  route 0.158ns (43.121%))
+  Logic Levels:           2  (FDRE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X108Y49        FDRE                         0.000     0.000 r  LED_Driver_connections/state_reg[0]/C
+    SLICE_X108Y49        FDRE (Prop_fdre_C_Q)         0.164     0.164 r  LED_Driver_connections/state_reg[0]/Q
+                         net (fo=6, routed)           0.158     0.322    LED_Driver_connections/state_reg_n_0_[0]
+    SLICE_X107Y49        LUT3 (Prop_lut3_I1_O)        0.045     0.367 r  LED_Driver_connections/duty_cycle_1[6]_i_1/O
+                         net (fo=1, routed)           0.000     0.367    LED_Driver_connections/duty_cycle_1[6]_i_1_n_0
+    SLICE_X107Y49        FDRE                                         r  LED_Driver_connections/duty_cycle_1_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/clock_counter_PWM_reg[11]__0/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/clock_counter_PWM_reg[11]__0/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.368ns  (logic 0.249ns (67.650%)  route 0.119ns (32.350%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y44        FDRE                         0.000     0.000 r  LED_Driver_connections/clock_counter_PWM_reg[11]__0/C
+    SLICE_X113Y44        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  LED_Driver_connections/clock_counter_PWM_reg[11]__0/Q
+                         net (fo=2, routed)           0.119     0.260    LED_Driver_connections/clock_counter_PWM_reg[11]__0_n_0
+    SLICE_X113Y44        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.368 r  LED_Driver_connections/clock_counter_PWM_reg[8]__0_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.368    LED_Driver_connections/clock_counter_PWM_reg[8]__0_i_1_n_4
+    SLICE_X113Y44        FDRE                                         r  LED_Driver_connections/clock_counter_PWM_reg[11]__0/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/clock_counter_PWM_reg[15]__0/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/clock_counter_PWM_reg[15]__0/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.368ns  (logic 0.249ns (67.650%)  route 0.119ns (32.350%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y45        FDRE                         0.000     0.000 r  LED_Driver_connections/clock_counter_PWM_reg[15]__0/C
+    SLICE_X113Y45        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  LED_Driver_connections/clock_counter_PWM_reg[15]__0/Q
+                         net (fo=2, routed)           0.119     0.260    LED_Driver_connections/clock_counter_PWM_reg[15]__0_n_0
+    SLICE_X113Y45        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.368 r  LED_Driver_connections/clock_counter_PWM_reg[12]__0_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.368    LED_Driver_connections/clock_counter_PWM_reg[12]__0_i_1_n_4
+    SLICE_X113Y45        FDRE                                         r  LED_Driver_connections/clock_counter_PWM_reg[15]__0/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/clock_counter_PWM_reg[19]__0/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/clock_counter_PWM_reg[19]__0/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.368ns  (logic 0.249ns (67.650%)  route 0.119ns (32.350%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y46        FDRE                         0.000     0.000 r  LED_Driver_connections/clock_counter_PWM_reg[19]__0/C
+    SLICE_X113Y46        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  LED_Driver_connections/clock_counter_PWM_reg[19]__0/Q
+                         net (fo=2, routed)           0.119     0.260    LED_Driver_connections/clock_counter_PWM_reg[19]__0_n_0
+    SLICE_X113Y46        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.368 r  LED_Driver_connections/clock_counter_PWM_reg[16]__0_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.368    LED_Driver_connections/clock_counter_PWM_reg[16]__0_i_1_n_4
+    SLICE_X113Y46        FDRE                                         r  LED_Driver_connections/clock_counter_PWM_reg[19]__0/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/clock_counter_PWM_reg[23]__0/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/clock_counter_PWM_reg[23]__0/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.368ns  (logic 0.249ns (67.650%)  route 0.119ns (32.350%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y47        FDRE                         0.000     0.000 r  LED_Driver_connections/clock_counter_PWM_reg[23]__0/C
+    SLICE_X113Y47        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  LED_Driver_connections/clock_counter_PWM_reg[23]__0/Q
+                         net (fo=2, routed)           0.119     0.260    LED_Driver_connections/clock_counter_PWM_reg[23]__0_n_0
+    SLICE_X113Y47        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.368 r  LED_Driver_connections/clock_counter_PWM_reg[20]__0_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.368    LED_Driver_connections/clock_counter_PWM_reg[20]__0_i_1_n_4
+    SLICE_X113Y47        FDRE                                         r  LED_Driver_connections/clock_counter_PWM_reg[23]__0/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/clock_counter_PWM_reg[27]__0/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/clock_counter_PWM_reg[27]__0/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.368ns  (logic 0.249ns (67.650%)  route 0.119ns (32.350%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y48        FDRE                         0.000     0.000 r  LED_Driver_connections/clock_counter_PWM_reg[27]__0/C
+    SLICE_X113Y48        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  LED_Driver_connections/clock_counter_PWM_reg[27]__0/Q
+                         net (fo=2, routed)           0.119     0.260    LED_Driver_connections/clock_counter_PWM_reg[27]__0_n_0
+    SLICE_X113Y48        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.368 r  LED_Driver_connections/clock_counter_PWM_reg[24]__0_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.368    LED_Driver_connections/clock_counter_PWM_reg[24]__0_i_1_n_4
+    SLICE_X113Y48        FDRE                                         r  LED_Driver_connections/clock_counter_PWM_reg[27]__0/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/clock_counter_PWM_reg[31]__0/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/clock_counter_PWM_reg[31]__0/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.368ns  (logic 0.249ns (67.650%)  route 0.119ns (32.350%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y49        FDRE                         0.000     0.000 r  LED_Driver_connections/clock_counter_PWM_reg[31]__0/C
+    SLICE_X113Y49        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  LED_Driver_connections/clock_counter_PWM_reg[31]__0/Q
+                         net (fo=2, routed)           0.119     0.260    LED_Driver_connections/clock_counter_PWM_reg[31]__0_n_0
+    SLICE_X113Y49        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.368 r  LED_Driver_connections/clock_counter_PWM_reg[28]__0_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.368    LED_Driver_connections/clock_counter_PWM_reg[28]__0_i_1_n_4
+    SLICE_X113Y49        FDRE                                         r  LED_Driver_connections/clock_counter_PWM_reg[31]__0/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/clock_counter_PWM_reg[3]__0/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/clock_counter_PWM_reg[3]__0/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.368ns  (logic 0.249ns (67.650%)  route 0.119ns (32.350%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y42        FDRE                         0.000     0.000 r  LED_Driver_connections/clock_counter_PWM_reg[3]__0/C
+    SLICE_X113Y42        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  LED_Driver_connections/clock_counter_PWM_reg[3]__0/Q
+                         net (fo=2, routed)           0.119     0.260    LED_Driver_connections/clock_counter_PWM_reg[3]__0_n_0
+    SLICE_X113Y42        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.368 r  LED_Driver_connections/clock_counter_PWM_reg[0]__0_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.368    LED_Driver_connections/clock_counter_PWM_reg[0]__0_i_1_n_4
+    SLICE_X113Y42        FDRE                                         r  LED_Driver_connections/clock_counter_PWM_reg[3]__0/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 LED_Driver_connections/clock_counter_PWM_reg[7]__0/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED_Driver_connections/clock_counter_PWM_reg[7]__0/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.368ns  (logic 0.249ns (67.650%)  route 0.119ns (32.350%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y43        FDRE                         0.000     0.000 r  LED_Driver_connections/clock_counter_PWM_reg[7]__0/C
+    SLICE_X113Y43        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  LED_Driver_connections/clock_counter_PWM_reg[7]__0/Q
+                         net (fo=2, routed)           0.119     0.260    LED_Driver_connections/clock_counter_PWM_reg[7]__0_n_0
+    SLICE_X113Y43        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.368 r  LED_Driver_connections/clock_counter_PWM_reg[4]__0_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.368    LED_Driver_connections/clock_counter_PWM_reg[4]__0_i_1_n_4
+    SLICE_X113Y43        FDRE                                         r  LED_Driver_connections/clock_counter_PWM_reg[7]__0/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

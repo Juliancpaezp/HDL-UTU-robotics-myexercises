@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Oct 12 11:25:34 2023
+# Process ID: 13940
+# Current directory: C:/VivadoProjects/Exercise2/Counter2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21212 C:\VivadoProjects\Exercise2\Counter2\Exercise2.xpr
+# Log file: C:/VivadoProjects/Exercise2/Counter2/vivado.log
+# Journal file: C:/VivadoProjects/Exercise2/Counter2\vivado.jou
+# Running On: DESKTOP-M3IS96G, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 4, Host memory: 8264 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/VivadoProjects/Exercise2/Counter2/Exercise2.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+open_wave_config C:/VivadoProjects/Exercise2/Counter2/main_TB_behav.wcfg
+source main_TB.tcl
+close_sim
+launch_simulation
+open_wave_config C:/VivadoProjects/Exercise2/Counter2/main_TB_behav.wcfg
+source main_TB.tcl
+close_sim

@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Nov 15 20:33:03 2023
+# Process ID: 15484
+# Current directory: C:/VivadoProjects/Exercise4/Task 6
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3392 C:\VivadoProjects\Exercise4\Task 6\Exercise4.xpr
+# Log file: C:/VivadoProjects/Exercise4/Task 6/vivado.log
+# Journal file: C:/VivadoProjects/Exercise4/Task 6\vivado.jou
+# Running On: DESKTOP-M3IS96G, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 4, Host memory: 8264 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/VivadoProjects/Exercise4/Task 6/Exercise4.xpr}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{C:/VivadoProjects/Exercise4/Task 6/Exercise4.srcs/sim_1/new/testbench.vhd}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{C:/VivadoProjects/Exercise4/Task 6/Exercise4.srcs/sim_1/new/testbench.vhd}}
+file delete -force {C:/VivadoProjects/Exercise4/Task 6/Exercise4.srcs/sim_1/new/testbench.vhd}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1

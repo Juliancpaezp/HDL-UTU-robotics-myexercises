@@ -1,0 +1,798 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Wed Oct 18 14:06:02 2023
+| Host         : DESKTOP-M3IS96G running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
+| Design       : top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  76          
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (76)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (157)
+5. checking no_input_delay (3)
+6. checking no_output_delay (2)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (76)
+-------------------------
+ There are 66 register/latch pins with no clock driven by root clock pin: GCLK (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: main_connections/my_clock_reg/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (157)
+--------------------------------------------------
+ There are 157 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (3)
+------------------------------
+ There are 3 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (2)
+-------------------------------
+ There are 2 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  159          inf        0.000                      0                  159           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           159 Endpoints
+Min Delay           159 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 main_connections/PWM_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LD0
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.289ns  (logic 3.978ns (54.578%)  route 3.311ns (45.422%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y90        FDRE                         0.000     0.000 r  main_connections/PWM_reg/C
+    SLICE_X107Y90        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_connections/PWM_reg/Q
+                         net (fo=1, routed)           3.311     3.767    LD0_OBUF
+    T22                  OBUF (Prop_obuf_I_O)         3.522     7.289 r  LD0_OBUF_inst/O
+                         net (fo=0)                   0.000     7.289    LD0
+    T22                                                               r  LD0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/over_reg/C
+                            (rising edge-triggered cell FDSE)
+  Destination:            LD1
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.039ns  (logic 3.970ns (56.399%)  route 3.069ns (43.601%))
+  Logic Levels:           2  (FDSE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y86        FDSE                         0.000     0.000 r  main_connections/over_reg/C
+    SLICE_X113Y86        FDSE (Prop_fdse_C_Q)         0.456     0.456 r  main_connections/over_reg/Q
+                         net (fo=1, routed)           3.069     3.525    LD1_OBUF
+    T21                  OBUF (Prop_obuf_I_O)         3.514     7.039 r  LD1_OBUF_inst/O
+                         net (fo=0)                   0.000     7.039    LD1
+    T21                                                               r  LD1 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 SW6
+                            (input port)
+  Destination:            main_connections/over_flag_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.986ns  (logic 2.251ns (32.224%)  route 4.735ns (67.776%))
+  Logic Levels:           6  (CARRY4=2 IBUF=1 LUT2=1 LUT4=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    H17                                               0.000     0.000 r  SW6 (IN)
+                         net (fo=0)                   0.000     0.000    SW6
+    H17                  IBUF (Prop_ibuf_I_O)         0.939     0.939 r  SW6_IBUF_inst/O
+                         net (fo=2, routed)           3.452     4.391    main_connections/SW6_IBUF
+    SLICE_X112Y87        LUT2 (Prop_lut2_I0_O)        0.124     4.515 r  main_connections/counter0_carry_i_5/O
+                         net (fo=1, routed)           0.000     4.515    main_connections/counter0_carry_i_5_n_0
+    SLICE_X112Y87        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     5.028 r  main_connections/counter0_carry/CO[3]
+                         net (fo=1, routed)           0.000     5.028    main_connections/counter0_carry_n_0
+    SLICE_X112Y88        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     5.284 r  main_connections/counter0_carry__0/O[2]
+                         net (fo=2, routed)           0.802     6.086    main_connections/sel0[7]
+    SLICE_X113Y87        LUT6 (Prop_lut6_I2_O)        0.301     6.387 r  main_connections/over_i_1/O
+                         net (fo=2, routed)           0.482     6.868    main_connections/over0
+    SLICE_X113Y87        LUT4 (Prop_lut4_I3_O)        0.118     6.986 r  main_connections/over_flag[0]_i_1/O
+                         net (fo=1, routed)           0.000     6.986    main_connections/over_flag[0]_i_1_n_0
+    SLICE_X113Y87        FDRE                                         r  main_connections/over_flag_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 SW6
+                            (input port)
+  Destination:            main_connections/over_reg/S
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.867ns  (logic 2.133ns (31.063%)  route 4.734ns (68.937%))
+  Logic Levels:           5  (CARRY4=2 IBUF=1 LUT2=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    H17                                               0.000     0.000 r  SW6 (IN)
+                         net (fo=0)                   0.000     0.000    SW6
+    H17                  IBUF (Prop_ibuf_I_O)         0.939     0.939 r  SW6_IBUF_inst/O
+                         net (fo=2, routed)           3.452     4.391    main_connections/SW6_IBUF
+    SLICE_X112Y87        LUT2 (Prop_lut2_I0_O)        0.124     4.515 r  main_connections/counter0_carry_i_5/O
+                         net (fo=1, routed)           0.000     4.515    main_connections/counter0_carry_i_5_n_0
+    SLICE_X112Y87        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     5.028 r  main_connections/counter0_carry/CO[3]
+                         net (fo=1, routed)           0.000     5.028    main_connections/counter0_carry_n_0
+    SLICE_X112Y88        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     5.284 r  main_connections/counter0_carry__0/O[2]
+                         net (fo=2, routed)           0.802     6.086    main_connections/sel0[7]
+    SLICE_X113Y87        LUT6 (Prop_lut6_I2_O)        0.301     6.387 r  main_connections/over_i_1/O
+                         net (fo=2, routed)           0.481     6.867    main_connections/over0
+    SLICE_X113Y86        FDSE                                         r  main_connections/over_reg/S
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_PWM_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_PWM_reg[0]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.306ns  (logic 2.548ns (40.407%)  route 3.758ns (59.593%))
+  Logic Levels:           11  (CARRY4=8 FDRE=1 LUT2=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y85        FDRE                         0.000     0.000 r  main_connections/clock_counter_PWM_reg[1]/C
+    SLICE_X111Y85        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_connections/clock_counter_PWM_reg[1]/Q
+                         net (fo=2, routed)           0.682     1.138    main_connections/clock_counter_PWM_reg[1]
+    SLICE_X108Y85        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.637     1.775 r  main_connections/PWM0_carry_i_10/CO[3]
+                         net (fo=1, routed)           0.000     1.775    main_connections/PWM0_carry_i_10_n_0
+    SLICE_X108Y86        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     1.892 r  main_connections/PWM0_carry_i_9/CO[3]
+                         net (fo=1, routed)           0.000     1.892    main_connections/PWM0_carry_i_9_n_0
+    SLICE_X108Y87        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.009 r  main_connections/PWM0_carry__0_i_6/CO[3]
+                         net (fo=1, routed)           0.000     2.009    main_connections/PWM0_carry__0_i_6_n_0
+    SLICE_X108Y88        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.126 r  main_connections/PWM0_carry__0_i_5/CO[3]
+                         net (fo=1, routed)           0.000     2.126    main_connections/PWM0_carry__0_i_5_n_0
+    SLICE_X108Y89        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.243 r  main_connections/PWM0_carry__1_i_6/CO[3]
+                         net (fo=1, routed)           0.000     2.243    main_connections/PWM0_carry__1_i_6_n_0
+    SLICE_X108Y90        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.360 r  main_connections/PWM0_carry__1_i_5/CO[3]
+                         net (fo=1, routed)           0.000     2.360    main_connections/PWM0_carry__1_i_5_n_0
+    SLICE_X108Y91        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.477 r  main_connections/PWM0_carry__2_i_6/CO[3]
+                         net (fo=1, routed)           0.000     2.477    main_connections/PWM0_carry__2_i_6_n_0
+    SLICE_X108Y92        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     2.800 f  main_connections/PWM0_carry__2_i_1/O[1]
+                         net (fo=2, routed)           0.911     3.710    main_connections/PWM0_carry__2_i_1_n_6
+    SLICE_X106Y90        LUT2 (Prop_lut2_I0_O)        0.306     4.016 r  main_connections/clock_counter_PWM[0]_i_7/O
+                         net (fo=1, routed)           0.797     4.813    main_connections/clock_counter_PWM[0]_i_7_n_0
+    SLICE_X106Y89        LUT6 (Prop_lut6_I4_O)        0.124     4.937 r  main_connections/clock_counter_PWM[0]_i_1/O
+                         net (fo=32, routed)          1.369     6.306    main_connections/clock_counter_PWM[0]_i_1_n_0
+    SLICE_X111Y85        FDRE                                         r  main_connections/clock_counter_PWM_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_PWM_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_PWM_reg[1]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.306ns  (logic 2.548ns (40.407%)  route 3.758ns (59.593%))
+  Logic Levels:           11  (CARRY4=8 FDRE=1 LUT2=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y85        FDRE                         0.000     0.000 r  main_connections/clock_counter_PWM_reg[1]/C
+    SLICE_X111Y85        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_connections/clock_counter_PWM_reg[1]/Q
+                         net (fo=2, routed)           0.682     1.138    main_connections/clock_counter_PWM_reg[1]
+    SLICE_X108Y85        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.637     1.775 r  main_connections/PWM0_carry_i_10/CO[3]
+                         net (fo=1, routed)           0.000     1.775    main_connections/PWM0_carry_i_10_n_0
+    SLICE_X108Y86        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     1.892 r  main_connections/PWM0_carry_i_9/CO[3]
+                         net (fo=1, routed)           0.000     1.892    main_connections/PWM0_carry_i_9_n_0
+    SLICE_X108Y87        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.009 r  main_connections/PWM0_carry__0_i_6/CO[3]
+                         net (fo=1, routed)           0.000     2.009    main_connections/PWM0_carry__0_i_6_n_0
+    SLICE_X108Y88        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.126 r  main_connections/PWM0_carry__0_i_5/CO[3]
+                         net (fo=1, routed)           0.000     2.126    main_connections/PWM0_carry__0_i_5_n_0
+    SLICE_X108Y89        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.243 r  main_connections/PWM0_carry__1_i_6/CO[3]
+                         net (fo=1, routed)           0.000     2.243    main_connections/PWM0_carry__1_i_6_n_0
+    SLICE_X108Y90        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.360 r  main_connections/PWM0_carry__1_i_5/CO[3]
+                         net (fo=1, routed)           0.000     2.360    main_connections/PWM0_carry__1_i_5_n_0
+    SLICE_X108Y91        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.477 r  main_connections/PWM0_carry__2_i_6/CO[3]
+                         net (fo=1, routed)           0.000     2.477    main_connections/PWM0_carry__2_i_6_n_0
+    SLICE_X108Y92        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     2.800 f  main_connections/PWM0_carry__2_i_1/O[1]
+                         net (fo=2, routed)           0.911     3.710    main_connections/PWM0_carry__2_i_1_n_6
+    SLICE_X106Y90        LUT2 (Prop_lut2_I0_O)        0.306     4.016 r  main_connections/clock_counter_PWM[0]_i_7/O
+                         net (fo=1, routed)           0.797     4.813    main_connections/clock_counter_PWM[0]_i_7_n_0
+    SLICE_X106Y89        LUT6 (Prop_lut6_I4_O)        0.124     4.937 r  main_connections/clock_counter_PWM[0]_i_1/O
+                         net (fo=32, routed)          1.369     6.306    main_connections/clock_counter_PWM[0]_i_1_n_0
+    SLICE_X111Y85        FDRE                                         r  main_connections/clock_counter_PWM_reg[1]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_PWM_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_PWM_reg[2]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.306ns  (logic 2.548ns (40.407%)  route 3.758ns (59.593%))
+  Logic Levels:           11  (CARRY4=8 FDRE=1 LUT2=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y85        FDRE                         0.000     0.000 r  main_connections/clock_counter_PWM_reg[1]/C
+    SLICE_X111Y85        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_connections/clock_counter_PWM_reg[1]/Q
+                         net (fo=2, routed)           0.682     1.138    main_connections/clock_counter_PWM_reg[1]
+    SLICE_X108Y85        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.637     1.775 r  main_connections/PWM0_carry_i_10/CO[3]
+                         net (fo=1, routed)           0.000     1.775    main_connections/PWM0_carry_i_10_n_0
+    SLICE_X108Y86        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     1.892 r  main_connections/PWM0_carry_i_9/CO[3]
+                         net (fo=1, routed)           0.000     1.892    main_connections/PWM0_carry_i_9_n_0
+    SLICE_X108Y87        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.009 r  main_connections/PWM0_carry__0_i_6/CO[3]
+                         net (fo=1, routed)           0.000     2.009    main_connections/PWM0_carry__0_i_6_n_0
+    SLICE_X108Y88        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.126 r  main_connections/PWM0_carry__0_i_5/CO[3]
+                         net (fo=1, routed)           0.000     2.126    main_connections/PWM0_carry__0_i_5_n_0
+    SLICE_X108Y89        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.243 r  main_connections/PWM0_carry__1_i_6/CO[3]
+                         net (fo=1, routed)           0.000     2.243    main_connections/PWM0_carry__1_i_6_n_0
+    SLICE_X108Y90        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.360 r  main_connections/PWM0_carry__1_i_5/CO[3]
+                         net (fo=1, routed)           0.000     2.360    main_connections/PWM0_carry__1_i_5_n_0
+    SLICE_X108Y91        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.477 r  main_connections/PWM0_carry__2_i_6/CO[3]
+                         net (fo=1, routed)           0.000     2.477    main_connections/PWM0_carry__2_i_6_n_0
+    SLICE_X108Y92        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     2.800 f  main_connections/PWM0_carry__2_i_1/O[1]
+                         net (fo=2, routed)           0.911     3.710    main_connections/PWM0_carry__2_i_1_n_6
+    SLICE_X106Y90        LUT2 (Prop_lut2_I0_O)        0.306     4.016 r  main_connections/clock_counter_PWM[0]_i_7/O
+                         net (fo=1, routed)           0.797     4.813    main_connections/clock_counter_PWM[0]_i_7_n_0
+    SLICE_X106Y89        LUT6 (Prop_lut6_I4_O)        0.124     4.937 r  main_connections/clock_counter_PWM[0]_i_1/O
+                         net (fo=32, routed)          1.369     6.306    main_connections/clock_counter_PWM[0]_i_1_n_0
+    SLICE_X111Y85        FDRE                                         r  main_connections/clock_counter_PWM_reg[2]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_PWM_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_PWM_reg[3]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.306ns  (logic 2.548ns (40.407%)  route 3.758ns (59.593%))
+  Logic Levels:           11  (CARRY4=8 FDRE=1 LUT2=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y85        FDRE                         0.000     0.000 r  main_connections/clock_counter_PWM_reg[1]/C
+    SLICE_X111Y85        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_connections/clock_counter_PWM_reg[1]/Q
+                         net (fo=2, routed)           0.682     1.138    main_connections/clock_counter_PWM_reg[1]
+    SLICE_X108Y85        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.637     1.775 r  main_connections/PWM0_carry_i_10/CO[3]
+                         net (fo=1, routed)           0.000     1.775    main_connections/PWM0_carry_i_10_n_0
+    SLICE_X108Y86        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     1.892 r  main_connections/PWM0_carry_i_9/CO[3]
+                         net (fo=1, routed)           0.000     1.892    main_connections/PWM0_carry_i_9_n_0
+    SLICE_X108Y87        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.009 r  main_connections/PWM0_carry__0_i_6/CO[3]
+                         net (fo=1, routed)           0.000     2.009    main_connections/PWM0_carry__0_i_6_n_0
+    SLICE_X108Y88        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.126 r  main_connections/PWM0_carry__0_i_5/CO[3]
+                         net (fo=1, routed)           0.000     2.126    main_connections/PWM0_carry__0_i_5_n_0
+    SLICE_X108Y89        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.243 r  main_connections/PWM0_carry__1_i_6/CO[3]
+                         net (fo=1, routed)           0.000     2.243    main_connections/PWM0_carry__1_i_6_n_0
+    SLICE_X108Y90        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.360 r  main_connections/PWM0_carry__1_i_5/CO[3]
+                         net (fo=1, routed)           0.000     2.360    main_connections/PWM0_carry__1_i_5_n_0
+    SLICE_X108Y91        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.477 r  main_connections/PWM0_carry__2_i_6/CO[3]
+                         net (fo=1, routed)           0.000     2.477    main_connections/PWM0_carry__2_i_6_n_0
+    SLICE_X108Y92        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     2.800 f  main_connections/PWM0_carry__2_i_1/O[1]
+                         net (fo=2, routed)           0.911     3.710    main_connections/PWM0_carry__2_i_1_n_6
+    SLICE_X106Y90        LUT2 (Prop_lut2_I0_O)        0.306     4.016 r  main_connections/clock_counter_PWM[0]_i_7/O
+                         net (fo=1, routed)           0.797     4.813    main_connections/clock_counter_PWM[0]_i_7_n_0
+    SLICE_X106Y89        LUT6 (Prop_lut6_I4_O)        0.124     4.937 r  main_connections/clock_counter_PWM[0]_i_1/O
+                         net (fo=32, routed)          1.369     6.306    main_connections/clock_counter_PWM[0]_i_1_n_0
+    SLICE_X111Y85        FDRE                                         r  main_connections/clock_counter_PWM_reg[3]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_reg[0]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.304ns  (logic 2.557ns (40.560%)  route 3.747ns (59.440%))
+  Logic Levels:           11  (CARRY4=8 FDRE=1 LUT2=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y81        FDRE                         0.000     0.000 r  main_connections/clock_counter_reg[1]/C
+    SLICE_X110Y81        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_connections/clock_counter_reg[1]/Q
+                         net (fo=2, routed)           0.751     1.207    main_connections/clock_counter_reg[1]
+    SLICE_X109Y84        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.656     1.863 r  main_connections/clock_counter_reg[0]_i_17/CO[3]
+                         net (fo=1, routed)           0.000     1.863    main_connections/clock_counter_reg[0]_i_17_n_0
+    SLICE_X109Y85        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.977 r  main_connections/clock_counter_reg[0]_i_13/CO[3]
+                         net (fo=1, routed)           0.000     1.977    main_connections/clock_counter_reg[0]_i_13_n_0
+    SLICE_X109Y86        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.091 r  main_connections/clock_counter_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.000     2.091    main_connections/clock_counter_reg[0]_i_14_n_0
+    SLICE_X109Y87        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.205 r  main_connections/clock_counter_reg[0]_i_16/CO[3]
+                         net (fo=1, routed)           0.000     2.205    main_connections/clock_counter_reg[0]_i_16_n_0
+    SLICE_X109Y88        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.319 r  main_connections/clock_counter_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     2.319    main_connections/clock_counter_reg[0]_i_15_n_0
+    SLICE_X109Y89        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.433 r  main_connections/clock_counter_reg[0]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     2.433    main_connections/clock_counter_reg[0]_i_10_n_0
+    SLICE_X109Y90        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.547 r  main_connections/clock_counter_reg[0]_i_11/CO[3]
+                         net (fo=1, routed)           0.000     2.547    main_connections/clock_counter_reg[0]_i_11_n_0
+    SLICE_X109Y91        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     2.881 f  main_connections/clock_counter_reg[0]_i_12/O[1]
+                         net (fo=1, routed)           0.803     3.684    main_connections/clock_counter_reg[0]_i_12_n_6
+    SLICE_X107Y91        LUT2 (Prop_lut2_I0_O)        0.303     3.987 f  main_connections/clock_counter[0]_i_7/O
+                         net (fo=1, routed)           0.944     4.931    main_connections/clock_counter[0]_i_7_n_0
+    SLICE_X106Y87        LUT6 (Prop_lut6_I4_O)        0.124     5.055 r  main_connections/clock_counter[0]_i_1/O
+                         net (fo=33, routed)          1.250     6.304    main_connections/clear
+    SLICE_X110Y81        FDRE                                         r  main_connections/clock_counter_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_reg[1]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.304ns  (logic 2.557ns (40.560%)  route 3.747ns (59.440%))
+  Logic Levels:           11  (CARRY4=8 FDRE=1 LUT2=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y81        FDRE                         0.000     0.000 r  main_connections/clock_counter_reg[1]/C
+    SLICE_X110Y81        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_connections/clock_counter_reg[1]/Q
+                         net (fo=2, routed)           0.751     1.207    main_connections/clock_counter_reg[1]
+    SLICE_X109Y84        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.656     1.863 r  main_connections/clock_counter_reg[0]_i_17/CO[3]
+                         net (fo=1, routed)           0.000     1.863    main_connections/clock_counter_reg[0]_i_17_n_0
+    SLICE_X109Y85        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.977 r  main_connections/clock_counter_reg[0]_i_13/CO[3]
+                         net (fo=1, routed)           0.000     1.977    main_connections/clock_counter_reg[0]_i_13_n_0
+    SLICE_X109Y86        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.091 r  main_connections/clock_counter_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.000     2.091    main_connections/clock_counter_reg[0]_i_14_n_0
+    SLICE_X109Y87        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.205 r  main_connections/clock_counter_reg[0]_i_16/CO[3]
+                         net (fo=1, routed)           0.000     2.205    main_connections/clock_counter_reg[0]_i_16_n_0
+    SLICE_X109Y88        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.319 r  main_connections/clock_counter_reg[0]_i_15/CO[3]
+                         net (fo=1, routed)           0.000     2.319    main_connections/clock_counter_reg[0]_i_15_n_0
+    SLICE_X109Y89        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.433 r  main_connections/clock_counter_reg[0]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     2.433    main_connections/clock_counter_reg[0]_i_10_n_0
+    SLICE_X109Y90        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.547 r  main_connections/clock_counter_reg[0]_i_11/CO[3]
+                         net (fo=1, routed)           0.000     2.547    main_connections/clock_counter_reg[0]_i_11_n_0
+    SLICE_X109Y91        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     2.881 f  main_connections/clock_counter_reg[0]_i_12/O[1]
+                         net (fo=1, routed)           0.803     3.684    main_connections/clock_counter_reg[0]_i_12_n_6
+    SLICE_X107Y91        LUT2 (Prop_lut2_I0_O)        0.303     3.987 f  main_connections/clock_counter[0]_i_7/O
+                         net (fo=1, routed)           0.944     4.931    main_connections/clock_counter[0]_i_7_n_0
+    SLICE_X106Y87        LUT6 (Prop_lut6_I4_O)        0.124     5.055 r  main_connections/clock_counter[0]_i_1/O
+                         net (fo=33, routed)          1.250     6.304    main_connections/clear
+    SLICE_X110Y81        FDRE                                         r  main_connections/clock_counter_reg[1]/R
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 main_connections/over_flag_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/over_flag_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.351ns  (logic 0.183ns (52.101%)  route 0.168ns (47.899%))
+  Logic Levels:           2  (FDRE=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y87        FDRE                         0.000     0.000 r  main_connections/over_flag_reg[0]/C
+    SLICE_X113Y87        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_connections/over_flag_reg[0]/Q
+                         net (fo=2, routed)           0.168     0.309    main_connections/over_flag[0]
+    SLICE_X113Y87        LUT4 (Prop_lut4_I2_O)        0.042     0.351 r  main_connections/over_flag[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.351    main_connections/over_flag[0]_i_1_n_0
+    SLICE_X113Y87        FDRE                                         r  main_connections/over_flag_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_PWM_reg[15]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_PWM_reg[15]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.367ns  (logic 0.249ns (67.829%)  route 0.118ns (32.171%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y88        FDRE                         0.000     0.000 r  main_connections/clock_counter_PWM_reg[15]/C
+    SLICE_X111Y88        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_connections/clock_counter_PWM_reg[15]/Q
+                         net (fo=2, routed)           0.118     0.259    main_connections/clock_counter_PWM_reg[15]
+    SLICE_X111Y88        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.367 r  main_connections/clock_counter_PWM_reg[12]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.367    main_connections/clock_counter_PWM_reg[12]_i_1_n_4
+    SLICE_X111Y88        FDRE                                         r  main_connections/clock_counter_PWM_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_PWM_reg[23]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_PWM_reg[23]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.367ns  (logic 0.249ns (67.829%)  route 0.118ns (32.171%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y90        FDRE                         0.000     0.000 r  main_connections/clock_counter_PWM_reg[23]/C
+    SLICE_X111Y90        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_connections/clock_counter_PWM_reg[23]/Q
+                         net (fo=2, routed)           0.118     0.259    main_connections/clock_counter_PWM_reg[23]
+    SLICE_X111Y90        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.367 r  main_connections/clock_counter_PWM_reg[20]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.367    main_connections/clock_counter_PWM_reg[20]_i_1_n_4
+    SLICE_X111Y90        FDRE                                         r  main_connections/clock_counter_PWM_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_PWM_reg[27]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_PWM_reg[27]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.367ns  (logic 0.249ns (67.829%)  route 0.118ns (32.171%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y91        FDRE                         0.000     0.000 r  main_connections/clock_counter_PWM_reg[27]/C
+    SLICE_X111Y91        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_connections/clock_counter_PWM_reg[27]/Q
+                         net (fo=2, routed)           0.118     0.259    main_connections/clock_counter_PWM_reg[27]
+    SLICE_X111Y91        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.367 r  main_connections/clock_counter_PWM_reg[24]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.367    main_connections/clock_counter_PWM_reg[24]_i_1_n_4
+    SLICE_X111Y91        FDRE                                         r  main_connections/clock_counter_PWM_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_PWM_reg[31]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_PWM_reg[31]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.367ns  (logic 0.249ns (67.829%)  route 0.118ns (32.171%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y92        FDRE                         0.000     0.000 r  main_connections/clock_counter_PWM_reg[31]/C
+    SLICE_X111Y92        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_connections/clock_counter_PWM_reg[31]/Q
+                         net (fo=2, routed)           0.118     0.259    main_connections/clock_counter_PWM_reg[31]
+    SLICE_X111Y92        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.367 r  main_connections/clock_counter_PWM_reg[28]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.367    main_connections/clock_counter_PWM_reg[28]_i_1_n_4
+    SLICE_X111Y92        FDRE                                         r  main_connections/clock_counter_PWM_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_PWM_reg[3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_PWM_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.367ns  (logic 0.249ns (67.829%)  route 0.118ns (32.171%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y85        FDRE                         0.000     0.000 r  main_connections/clock_counter_PWM_reg[3]/C
+    SLICE_X111Y85        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_connections/clock_counter_PWM_reg[3]/Q
+                         net (fo=2, routed)           0.118     0.259    main_connections/clock_counter_PWM_reg[3]
+    SLICE_X111Y85        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.367 r  main_connections/clock_counter_PWM_reg[0]_i_2/O[3]
+                         net (fo=1, routed)           0.000     0.367    main_connections/clock_counter_PWM_reg[0]_i_2_n_4
+    SLICE_X111Y85        FDRE                                         r  main_connections/clock_counter_PWM_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_PWM_reg[7]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_PWM_reg[7]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.367ns  (logic 0.249ns (67.829%)  route 0.118ns (32.171%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y86        FDRE                         0.000     0.000 r  main_connections/clock_counter_PWM_reg[7]/C
+    SLICE_X111Y86        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_connections/clock_counter_PWM_reg[7]/Q
+                         net (fo=2, routed)           0.118     0.259    main_connections/clock_counter_PWM_reg[7]
+    SLICE_X111Y86        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.367 r  main_connections/clock_counter_PWM_reg[4]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.367    main_connections/clock_counter_PWM_reg[4]_i_1_n_4
+    SLICE_X111Y86        FDRE                                         r  main_connections/clock_counter_PWM_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_PWM_reg[11]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_PWM_reg[11]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y87        FDRE                         0.000     0.000 r  main_connections/clock_counter_PWM_reg[11]/C
+    SLICE_X111Y87        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_connections/clock_counter_PWM_reg[11]/Q
+                         net (fo=2, routed)           0.120     0.261    main_connections/clock_counter_PWM_reg[11]
+    SLICE_X111Y87        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.369 r  main_connections/clock_counter_PWM_reg[8]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.369    main_connections/clock_counter_PWM_reg[8]_i_1_n_4
+    SLICE_X111Y87        FDRE                                         r  main_connections/clock_counter_PWM_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_PWM_reg[19]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_PWM_reg[19]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y89        FDRE                         0.000     0.000 r  main_connections/clock_counter_PWM_reg[19]/C
+    SLICE_X111Y89        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_connections/clock_counter_PWM_reg[19]/Q
+                         net (fo=2, routed)           0.120     0.261    main_connections/clock_counter_PWM_reg[19]
+    SLICE_X111Y89        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.369 r  main_connections/clock_counter_PWM_reg[16]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.369    main_connections/clock_counter_PWM_reg[16]_i_1_n_4
+    SLICE_X111Y89        FDRE                                         r  main_connections/clock_counter_PWM_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_connections/clock_counter_PWM_reg[4]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_connections/clock_counter_PWM_reg[4]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.371ns  (logic 0.256ns (68.994%)  route 0.115ns (31.006%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y86        FDRE                         0.000     0.000 r  main_connections/clock_counter_PWM_reg[4]/C
+    SLICE_X111Y86        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_connections/clock_counter_PWM_reg[4]/Q
+                         net (fo=2, routed)           0.115     0.256    main_connections/clock_counter_PWM_reg[4]
+    SLICE_X111Y86        CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     0.371 r  main_connections/clock_counter_PWM_reg[4]_i_1/O[0]
+                         net (fo=1, routed)           0.000     0.371    main_connections/clock_counter_PWM_reg[4]_i_1_n_7
+    SLICE_X111Y86        FDRE                                         r  main_connections/clock_counter_PWM_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
